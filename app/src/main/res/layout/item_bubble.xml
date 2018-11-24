@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/layoutLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/default_avatar"
+            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_width="1dp" />
+
+        <ImageView
+            android:id="@+id/ivHeart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/ivAvatar"
+            android:src="@drawable/icon_heart"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/layoutBubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/ivAvatar"
+            android:background="@drawable/bubble_background_layout"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tvName"
+                android:layout_below="@id/tvName"
+                android:maxWidth="150dp"
+                android:text="Đây là 1 dòng tin nhắn"
+                android:textStyle="italic" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/layoutBubble"
+            android:layout_below="@id/layoutBubble"
+            android:layout_marginLeft="10dp"
+            android:text="Vừa xong"
+            android:textSize="12dp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivHeartRight"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_heart"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/layoutBubbleRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bubble_right_background_layout"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvMessageRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="200dp"
+                android:text="Đây là 1 dòng tin nhắn"
+                android:textColor="@color/colorWhite"
+                android:textStyle="italic" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTimeRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/layoutBubbleRight"
+            android:layout_below="@id/layoutBubbleRight"
+            android:layout_marginRight="10dp"
+            android:text="Vừa xong"
+            android:textSize="12dp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

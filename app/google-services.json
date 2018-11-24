@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "20303973583",
+    "firebase_url": "https://aloha-170a2.firebaseio.com",
+    "project_id": "aloha-170a2",
+    "storage_bucket": "aloha-170a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:20303973583:android:723f1f079bc04746",
+        "android_client_info": {
+          "package_name": "com.englandstudio.aloha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "20303973583-4q1340pp6n7t9bh3rjmm4o5q4cf3b43u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.englandstudio.aloha",
+            "certificate_hash": "18f7cead85e3658a53c0f4eebdfba2698c91a617"
+          }
+        },
+        {
+          "client_id": "20303973583-3sfjgk9kvi4qoqcnmo3goep47va221ca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN4bbCMGH2zla3wBJg_KcK4nEGcC79kUI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "20303973583-3sfjgk9kvi4qoqcnmo3goep47va221ca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

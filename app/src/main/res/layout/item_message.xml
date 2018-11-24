@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/default_avatar"
+            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_width="1dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivOnline"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignBottom="@id/ivAvatar"
+            android:layout_alignRight="@id/ivAvatar"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="3dp"
+            android:src="@color/colorOnline"
+            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_width="1dp" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/ivAvatar"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tvName"
+            android:layout_below="@id/tvName"
+            android:maxLines="1"
+            android:textSize="16dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tvName"
+            android:layout_below="@id/tvMessage"
+            android:maxLines="1"
+            android:textSize="12dp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+
+</RelativeLayout>

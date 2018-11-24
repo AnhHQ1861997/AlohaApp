@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".Fragments.OptionsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/layoutProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+
+                <ImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/business" />
+
+                <TextView
+                    android:id="@+id/tvProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ivProfile"
+                    android:text="Trang cá nhân"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22dp"
+                    android:textStyle="italic" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutProfile"
+                android:padding="15dp">
+
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/search" />
+
+                <TextView
+                    android:id="@+id/tvSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ivSearch"
+                    android:text="Tìm kiếm"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22dp"
+                    android:textStyle="italic" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutNewsFeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutSearch"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/ivNewsFeed"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/edit" />
+
+                <TextView
+                    android:id="@+id/tvNews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ivNewsFeed"
+                    android:text="Bảng tin"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22dp"
+                    android:textStyle="italic" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutMessages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutNewsFeed"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/ivMessages"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/chat" />
+
+                <TextView
+                    android:id="@+id/tvMessages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ivMessages"
+                    android:text="Tin nhắn"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22dp"
+                    android:textStyle="italic" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutMessages"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/ivNotifications"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/music" />
+
+                <TextView
+                    android:id="@+id/tvNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ivNotifications"
+                    android:text="Thông báo"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22dp"
+                    android:textStyle="italic" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutFriends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutNotifications"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/ivFriends"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/shapes" />
+
+                <TextView
+                    android:id="@+id/tvFriends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ivFriends"
+                    android:text="Bạn bè"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22dp"
+                    android:textStyle="italic" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutFriends"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/ivShare"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/share" />
+
+                <TextView
+                    android:id="@+id/tvShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ivShare"
+                    android:text="Chia sẻ"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22dp"
+                    android:textStyle="italic" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutShare"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/ivAbout"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/info" />
+
+                <TextView
+                    android:id="@+id/tvAbout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ivAbout"
+                    android:text="Thông tin ứng dụng"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22dp"
+                    android:textStyle="italic" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutAbout"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/ivLogout"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/mark" />
+
+                <TextView
+                    android:id="@+id/tvLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/ivLogout"
+                    android:text="Đăng xuất"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22dp"
+                    android:textStyle="italic" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

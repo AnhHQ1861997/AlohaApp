@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:fitsSystemWindows="true"
+    tools:context=".SignupActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layoutMain"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/title_font"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/colorWhite"
+        android:textSize="50dp" />
+
+    <RelativeLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/layoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/etFirstName"
+                android:layout_width="1000dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_margin="5dp"
+                android:layout_toLeftOf="@id/etLastName"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_background_layout"
+                android:hint="Họ"
+                android:inputType="text"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGray" />
+
+            <EditText
+                android:id="@+id/etLastName"
+                android:layout_width="1000dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_background_layout"
+                android:hint="Tên"
+                android:inputType="text"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGray" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="1000dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/layoutName"
+            android:layout_margin="5dp"
+            android:background="@drawable/edittext_background_layout"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorGray" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="1000dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/etEmail"
+            android:layout_margin="5dp"
+            android:background="@drawable/edittext_background_layout"
+            android:hint="Số điện thoại"
+            android:inputType="phone"
+            android:maxLength="12"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorGray" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="1000dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/etPhone"
+            android:layout_margin="5dp"
+            android:background="@drawable/edittext_background_layout"
+            android:hint="Mật khẩu"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorGray" />
+
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="1000dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/etPassword"
+            android:layout_margin="5dp"
+            android:background="@drawable/edittext_background_layout"
+            android:hint="Nhập lại mật khẩu"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorGray" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etConfirmPassword">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/layoutMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <RadioButton
+                        android:id="@+id/rbtMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:checked="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/rbtMale"
+                        android:gravity="center"
+                        android:text="Nam"
+                        android:textColor="@color/colorGray"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layoutFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_toRightOf="@id/layoutMale">
+
+                    <RadioButton
+                        android:id="@+id/rbtFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/rbtFemale"
+                        android:gravity="center"
+                        android:text="Nữ"
+                        android:textColor="@color/colorGray"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btSignUp"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/radioGroup"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_background_layout"
+            android:text="Đăng ký"
+            android:textAllCaps="false"
+            android:textColor="@color/colorGray"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:text="Đã có tài khoản!"
+        android:textColor="@color/colorGray" />
+
+</RelativeLayout>

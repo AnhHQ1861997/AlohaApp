@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    tools:context=".EditProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/ivUpdate"
+            app:title="Cập nhật thông tin"
+            app:titleTextColor="@color/colorWhite">
+
+        </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/ivUpdate"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignBottom="@id/toolbar"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/toolbar"
+            android:padding="10dp"
+            android:src="@drawable/success" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutTop">
+
+        <RelativeLayout
+            android:id="@+id/layoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/default_avatar"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="2dp" />
+
+            <EditText
+                android:id="@+id/etFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/ivAvatar"
+                android:background="@drawable/edittext2_background_layout"
+                android:hint="Họ"
+                android:inputType="text"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorGray" />
+
+            <EditText
+                android:id="@+id/etLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etFirstName"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/ivAvatar"
+                android:background="@drawable/edittext2_background_layout"
+                android:hint="Tên"
+                android:inputType="text"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorGray" />
+
+            <RelativeLayout
+                android:id="@+id/layoutGender"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/etLastName"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/ivAvatar">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/ivMale"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:src="@drawable/masculine" />
+
+                    <RadioButton
+                        android:id="@+id/rbtMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_toRightOf="@id/ivMale" />
+
+                    <ImageView
+                        android:id="@+id/ivFemale"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/rbtMale"
+                        android:padding="5dp"
+                        android:src="@drawable/femenine" />
+
+                    <RadioButton
+                        android:id="@+id/rbtFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ivFemale" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivEmail"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@id/etEmail"
+                android:layout_alignTop="@id/etEmail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/email" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutGender"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/ivEmail"
+                android:background="@drawable/edittext2_background_layout"
+                android:enabled="false"
+                android:hint="Email"
+                android:inputType="text"
+                android:textColor="@color/colorGray"
+                android:textColorHint="@color/colorGray" />
+
+            <ImageView
+                android:id="@+id/ivTitle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@id/etTitle"
+                android:layout_alignTop="@id/etTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/edit" />
+
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etEmail"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/ivTitle"
+                android:background="@drawable/edittext2_background_layout"
+                android:hint="Giới thiệu"
+                android:inputType="text"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorGray" />
+
+            <ImageView
+                android:id="@+id/ivPhone"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@id/etPhone"
+                android:layout_alignTop="@id/etPhone"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/smartphone" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etTitle"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:maxLength="12"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/ivPhone"
+                android:background="@drawable/edittext2_background_layout"
+                android:hint="Số điện thoại"
+                android:inputType="phone"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorGray" />
+
+            <ImageView
+                android:id="@+id/ivLocal"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@id/etLocal"
+                android:layout_alignTop="@id/etLocal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/placeholder" />
+
+            <Spinner
+                android:id="@+id/etLocal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/etPhone"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/ivLocal"
+                android:background="@drawable/edittext2_background_layout"
+                android:inputType="text"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorGray" />
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/etLocal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button2_background_layout"
+                android:text="Đổi mật khẩu"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

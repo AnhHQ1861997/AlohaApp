@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_newsFeed"
+        android:icon="@drawable/edit"
+        android:title="Bảng tin" />
+    <item
+        android:id="@+id/item_message"
+        android:icon="@drawable/chat"
+        android:title="Tin nhắn" />
+    <item
+        android:id="@+id/item_notification"
+        android:icon="@drawable/music"
+        android:title="Thông báo" />
+    <item
+        android:id="@+id/item_friend"
+        android:icon="@drawable/shapes"
+        android:title="Bạn bè" />
+    <item
+        android:id="@+id/item_option"
+        android:icon="@drawable/mark"
+        android:title="Tùy chọn" />
+</menu>

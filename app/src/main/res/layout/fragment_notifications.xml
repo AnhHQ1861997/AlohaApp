@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.NotificationsFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite">
+
+            <RelativeLayout
+                android:id="@+id/layoutNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Thông báo"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold|italic" />
+
+                <View
+                    android:id="@+id/viewNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tvNotification"
+                    android:background="@color/colorPrimary" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutNotification"
+                android:background="@color/colorWhite"
+                tools:listitem="@layout/item_notification">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/layoutFriendRequest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewNotification"
+                android:background="@color/colorWhite">
+
+                <View
+                    android:id="@+id/viewFriendRequestTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/tvFriendRequest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewFriendRequestTop"
+                    android:padding="5dp"
+                    android:text="Lời mời kết bạn"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold|italic" />
+
+                <View
+                    android:id="@+id/viewFriendRequestBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tvFriendRequest"
+                    android:background="@color/colorPrimary" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewFriendRequest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/layoutFriendRequest"
+                android:background="@color/colorWhite"
+                tools:listitem="@layout/item_friend_request">
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

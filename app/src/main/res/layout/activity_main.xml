@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="10dp">
+
+        <RelativeLayout
+            android:id="@+id/layoutSearch"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ivAvatar"
+            android:background="@drawable/button_background_layout">
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_search" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/ivSearch"
+                android:text="Tìm kiếm bạn bè"
+                android:textColor="@color/colorWhite" />
+        </RelativeLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/default_avatar" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view"
+        android:layout_below="@id/layoutTop"
+        android:background="@color/colorWhite">
+
+    </android.support.v4.view.ViewPager>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/navigationView"
+        android:background="@color/colorPrimary" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorWhite"
+        app:itemTextColor="@color/colorPrimary"
+        app:menu="@menu/bottom_menu">
+
+    </android.support.design.widget.BottomNavigationView>
+
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    tools:context=".MessageActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/ivAvatar"
+            app:subtitle="Vừa xong"
+            app:subtitleTextColor="@color/colorWhite"
+            app:title="Tên người dùng"
+            app:titleTextColor="@color/colorWhite">
+
+        </android.support.v7.widget.Toolbar>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/default_avatar"
+            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_width="2dp" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layoutBottom"
+        android:layout_below="@id/layoutTop">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            tools:listitem="@layout/item_bubble">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <!--<View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/layoutBottom"
+        android:background="@color/colorPrimary" />-->
+
+    <RelativeLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext2_background_layout">
+
+            <EditText
+                android:id="@+id/etInbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/ivInbox"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:hint="Gửi tin nhắn"
+                android:inputType="text"
+                android:paddingRight="50dp"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorGray">
+
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/ivInbox"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@color/colorGray"
+                android:background="@drawable/baseline_favorite_border_black" />
+        </RelativeLayout>
+
+        <!--<de.hdodenhof.circleimageview.CircleImageView-->
+        <!--android:id="@+id/ivInbox"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:src="@drawable/technology"-->
+        <!--app:civ_border_color="@color/colorGray"-->
+        <!--app:civ_border_width="1dp" />-->
+
+    </RelativeLayout>
+
+</RelativeLayout>
