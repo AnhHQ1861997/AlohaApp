@@ -11,11 +11,12 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:id="@+id/layoutTop"
@@ -26,13 +27,14 @@
                     android:id="@+id/ivImage"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:background="@drawable/background_light" />
+                    android:background="@drawable/background_light"
+                    tools:ignore="ContentDescription" />
 
                 <android.support.v7.widget.Toolbar
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@id/layoutSettings"
+                    android:layout_toStartOf="@id/layoutSettings"
                     app:titleTextColor="@color/colorWhite">
 
                 </android.support.v7.widget.Toolbar>
@@ -41,7 +43,7 @@
                     android:id="@+id/layoutSettings"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:layout_alignParentRight="true">
+                    android:layout_alignParentEnd="true">
 
                     <ImageView
                         android:id="@+id/ivSettings"
@@ -50,14 +52,15 @@
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
                         android:layout_margin="10dp"
-                        android:src="@drawable/settings" />
+                        android:src="@drawable/settings"
+                        tools:ignore="ContentDescription" />
                 </RelativeLayout>
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/ivAvatar"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="140dp"
                     android:src="@drawable/default_avatar"
                     app:civ_border_color="@color/colorPrimary"
@@ -72,22 +75,23 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerInParent="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="5dp"
-                    android:layout_toLeftOf="@id/tvName" />
+                    android:layout_marginEnd="5dp"
+                    android:layout_toStartOf="@id/tvName"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/tvName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@id/ivImage"
-                    android:layout_alignRight="@id/ivImage"
+                    android:layout_alignEnd="@id/ivImage"
                     android:layout_marginBottom="20dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
                     android:maxWidth="160dp"
-                    android:text="England Hoàng"
+                    android:text="@string/profile_user_name"
                     android:textAlignment="textEnd"
                     android:textColor="@color/colorWhite"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold|italic" />
 
                 <RelativeLayout
@@ -95,11 +99,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/ivImage"
-                    android:layout_toRightOf="@id/ivAvatar"
+                    android:layout_toEndOf="@id/ivAvatar"
                     android:minHeight="70dp"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="5dp"
-                    android:paddingRight="15dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="15dp"
                     android:paddingTop="5dp">
 
                     <ImageView
@@ -108,14 +112,15 @@
                         android:layout_height="20dp"
                         android:layout_alignBottom="@id/tvTitle"
                         android:layout_alignTop="@id/tvTitle"
-                        android:src="@drawable/edit" />
+                        android:src="@drawable/edit"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:id="@+id/tvTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:layout_toRightOf="@id/ivTitle"
+                        android:layout_toEndOf="@id/ivTitle"
                         android:text=""
                         android:textColor="@color/colorPrimary"
                         android:textStyle="italic" />
@@ -126,7 +131,8 @@
                         android:layout_height="20dp"
                         android:layout_alignBottom="@id/tvPhone"
                         android:layout_alignTop="@id/tvPhone"
-                        android:src="@drawable/smartphone" />
+                        android:src="@drawable/smartphone"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:id="@+id/tvPhone"
@@ -134,7 +140,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/ivTitle"
                         android:layout_margin="5dp"
-                        android:layout_toRightOf="@id/ivPhone"
+                        android:layout_toEndOf="@id/ivPhone"
                         android:text=""
                         android:textColor="@color/colorPrimary"
                         android:textStyle="italic" />
@@ -145,7 +151,8 @@
                         android:layout_height="20dp"
                         android:layout_alignBottom="@id/tvLocal"
                         android:layout_alignTop="@id/tvLocal"
-                        android:src="@drawable/placeholder" />
+                        android:src="@drawable/placeholder"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:id="@+id/tvLocal"
@@ -155,7 +162,7 @@
                         android:layout_marginBottom="5dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
-                        android:layout_toRightOf="@id/ivLocal"
+                        android:layout_toEndOf="@id/ivLocal"
                         android:text=""
                         android:textColor="@color/colorPrimary"
                         android:textStyle="italic" />
@@ -194,9 +201,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="Thêm bạn bè"
+                            android:text="@string/profile_add_friend"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="18dp"
+                            android:textSize="18sp"
                             android:textStyle="bold" />
                     </RelativeLayout>
 
@@ -218,9 +225,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="Gửi tin nhắn"
+                            android:text="@string/profile_send_message"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="18dp"
+                            android:textSize="18sp"
                             android:textStyle="bold" />
                     </RelativeLayout>
 

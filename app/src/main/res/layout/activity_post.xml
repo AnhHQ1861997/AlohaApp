@@ -18,8 +18,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/ivUpdate"
-            app:title="Cập nhật trạng thái"
+            android:layout_toStartOf="@id/ivUpdate"
+            app:title="@string/post_update"
             app:titleTextColor="@color/colorWhite">
 
         </android.support.v7.widget.Toolbar>
@@ -29,7 +29,7 @@
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_alignBottom="@id/toolbar"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignTop="@id/toolbar"
             android:padding="10dp"
             android:src="@drawable/success" />
@@ -89,12 +89,14 @@
         <EditText
             android:id="@+id/etPost"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/colorWhite"
-            android:gravity="left"
-            android:hint="Bạn đang nghĩ gì"
+            android:gravity="start"
+            android:hint="@string/post_status"
             android:padding="10dp"
-            android:textColor="@color/colorPrimary" />
+            android:inputType="textMultiLine"
+            android:textColor="@color/colorPrimary"
+            tools:ignore="Autofill,TextFields" />
 
     </ScrollView>
 

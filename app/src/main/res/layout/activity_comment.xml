@@ -16,7 +16,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:id="@+id/layoutMain"
@@ -41,20 +41,20 @@
                         android:id="@+id/tvName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@id/ivAvatar"
-                        android:text="Tên người dùng"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/ivAvatar"
+                        android:text="@string/comment_user_name"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:textStyle="bold|italic" />
 
                     <TextView
                         android:id="@+id/tvTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/tvName"
                         android:layout_below="@id/tvName"
-                        android:text="Vừa xong"
+                        android:layout_alignStart="@id/tvName"
+                        android:text="@string/comment_time"
                         android:textColor="@color/colorGray"
                         android:textStyle="italic" />
 
@@ -66,18 +66,18 @@
                         android:layout_marginTop="10dp"
                         android:background="@color/colorWhite"
                         android:maxLines="5"
-                        android:text="Đây là một trạng thái" />
+                        android:text="@string/comment_status" />
 
                     <TextView
                         android:id="@+id/tvMore"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignLeft="@id/tvStatus"
                         android:layout_below="@id/tvStatus"
-                        android:text="Đọc tiếp..."
-                        android:visibility="gone"
+                        android:layout_alignStart="@id/tvStatus"
+                        android:text="@string/comment_more"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="12dp" />
+                        android:textSize="12sp"
+                        android:visibility="gone" />
                 </RelativeLayout>
 
                 <View
@@ -92,7 +92,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/view"
                     android:orientation="horizontal"
-                    android:weightSum="2">
+                    android:weightSum="2"
+                    tools:ignore="DisableBaselineAlignment">
 
                     <RelativeLayout
                         android:layout_width="1000dp"
@@ -110,12 +111,12 @@
                             android:id="@+id/tvFavorite"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignBottom="@id/btFavorite"
                             android:layout_alignTop="@id/btFavorite"
+                            android:layout_alignBottom="@id/btFavorite"
                             android:layout_centerVertical="true"
-                            android:layout_toRightOf="@id/btFavorite"
+                            android:layout_toEndOf="@id/btFavorite"
                             android:gravity="center_vertical"
-                            android:text="0 yêu thích" />
+                            android:text="@string/comment_favorite" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -129,15 +130,16 @@
                             android:layout_height="50dp"
                             android:layout_centerVertical="true"
                             android:padding="15dp"
-                            android:src="@drawable/comment" />
+                            android:src="@drawable/comment"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
                             android:id="@+id/tvComment"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
-                            android:layout_toRightOf="@id/ivCommentz"
+                            android:layout_toEndOf="@id/ivCommentz"
                             android:gravity="center_vertical"
-                            android:text="0 bình luận" />
+                            android:text="@string/comment_comment" />
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -180,42 +182,33 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/edittext2_background_layout">
+            android:background="@drawable/edittext2_background_layout"
+            tools:ignore="UselessParent">
 
             <EditText
                 android:id="@+id/etComment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toLeftOf="@id/ivInbox"
+                android:layout_toStartOf="@id/ivInbox"
                 android:background="@color/colorWhite"
                 android:gravity="center_vertical"
-                android:hint="Nhập bình luận"
+                android:hint="@string/comment_input"
                 android:inputType="text"
-                android:paddingRight="50dp"
+                android:paddingEnd="50dp"
                 android:textColor="@color/colorPrimary"
-                android:textColorHint="@color/colorGray">
-
-            </EditText>
+                android:textColorHint="@color/colorGray"
+                tools:ignore="Autofill,RtlSymmetry" />
 
             <ImageButton
                 android:id="@+id/ivComment"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:background="@drawable/baseline_send_black" />
+                android:background="@drawable/baseline_send_black"
+                tools:ignore="ContentDescription" />
         </RelativeLayout>
-
-        <!--<de.hdodenhof.circleimageview.CircleImageView-->
-        <!--android:id="@+id/ivInbox"-->
-        <!--android:layout_width="40dp"-->
-        <!--android:layout_height="40dp"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_marginLeft="5dp"-->
-        <!--android:src="@drawable/technology"-->
-        <!--app:civ_border_color="@color/colorGray"-->
-        <!--app:civ_border_width="1dp" />-->
 
     </RelativeLayout>
 
