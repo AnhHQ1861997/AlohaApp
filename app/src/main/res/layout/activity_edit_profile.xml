@@ -18,8 +18,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/ivUpdate"
-            app:title="Cập nhật thông tin"
+            android:layout_toStartOf="@id/ivUpdate"
+            app:title="@string/edit_update"
             app:titleTextColor="@color/colorWhite">
 
         </android.support.v7.widget.Toolbar>
@@ -28,11 +28,12 @@
             android:id="@+id/ivUpdate"
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:layout_alignBottom="@id/toolbar"
-            android:layout_alignParentRight="true"
             android:layout_alignTop="@id/toolbar"
+            android:layout_alignBottom="@id/toolbar"
+            android:layout_alignParentEnd="true"
             android:padding="10dp"
-            android:src="@drawable/success" />
+            android:src="@drawable/success"
+            tools:ignore="ContentDescription" />
 
     </RelativeLayout>
 
@@ -59,48 +60,51 @@
                 android:id="@+id/etFirstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_toRightOf="@id/ivAvatar"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@id/ivAvatar"
                 android:background="@drawable/edittext2_background_layout"
-                android:hint="Họ"
+                android:hint="@string/edit_last_name"
                 android:inputType="text"
                 android:textColor="@color/colorPrimary"
-                android:textColorHint="@color/colorGray" />
+                android:textColorHint="@color/colorGray"
+                tools:ignore="Autofill" />
 
             <EditText
                 android:id="@+id/etLastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/etFirstName"
-                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/ivAvatar"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@id/ivAvatar"
                 android:background="@drawable/edittext2_background_layout"
-                android:hint="Tên"
+                android:hint="@string/edit_first_name"
                 android:inputType="text"
                 android:textColor="@color/colorPrimary"
-                android:textColorHint="@color/colorGray" />
+                android:textColorHint="@color/colorGray"
+                tools:ignore="Autofill" />
 
             <RelativeLayout
                 android:id="@+id/layoutGender"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@id/etLastName"
-                android:layout_marginBottom="5dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_toRightOf="@id/ivAvatar">
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@id/ivAvatar">
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true">
+                    android:layout_centerVertical="true"
+                    tools:ignore="UselessParent">
 
                     <ImageView
                         android:id="@+id/ivMale"
@@ -108,31 +112,33 @@
                         android:layout_height="30dp"
                         android:layout_centerVertical="true"
                         android:padding="5dp"
-                        android:src="@drawable/masculine" />
+                        android:src="@drawable/masculine"
+                        tools:ignore="ContentDescription" />
 
                     <RadioButton
                         android:id="@+id/rbtMale"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="20dp"
-                        android:layout_toRightOf="@id/ivMale" />
+                        android:layout_marginEnd="20dp"
+                        android:layout_toEndOf="@id/ivMale" />
 
                     <ImageView
                         android:id="@+id/ivFemale"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_toRightOf="@id/rbtMale"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/rbtMale"
                         android:padding="5dp"
-                        android:src="@drawable/femenine" />
+                        android:src="@drawable/femenine"
+                        tools:ignore="ContentDescription" />
 
                     <RadioButton
                         android:id="@+id/rbtFemale"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toRightOf="@id/ivFemale" />
+                        android:layout_toEndOf="@id/ivFemale" />
 
                 </RelativeLayout>
 
@@ -142,102 +148,109 @@
                 android:id="@+id/ivEmail"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_alignBottom="@id/etEmail"
                 android:layout_alignTop="@id/etEmail"
+                android:layout_alignBottom="@id/etEmail"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/email" />
+                android:src="@drawable/email"
+                tools:ignore="ContentDescription" />
 
             <EditText
                 android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/layoutGender"
-                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/ivEmail"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@id/ivEmail"
                 android:background="@drawable/edittext2_background_layout"
                 android:enabled="false"
-                android:hint="Email"
-                android:inputType="text"
+                android:hint="@string/edit_email"
+                android:inputType="textEmailAddress"
                 android:textColor="@color/colorGray"
-                android:textColorHint="@color/colorGray" />
+                android:textColorHint="@color/colorGray"
+                tools:ignore="Autofill" />
 
             <ImageView
                 android:id="@+id/ivTitle"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_alignBottom="@id/etTitle"
                 android:layout_alignTop="@id/etTitle"
+                android:layout_alignBottom="@id/etTitle"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/edit" />
+                android:src="@drawable/edit"
+                tools:ignore="ContentDescription" />
 
             <EditText
                 android:id="@+id/etTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/etEmail"
-                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/ivTitle"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@id/ivTitle"
                 android:background="@drawable/edittext2_background_layout"
-                android:hint="Giới thiệu"
+                android:hint="@string/edit_about"
                 android:inputType="text"
                 android:textColor="@color/colorPrimary"
-                android:textColorHint="@color/colorGray" />
+                android:textColorHint="@color/colorGray"
+                tools:ignore="Autofill" />
 
             <ImageView
                 android:id="@+id/ivPhone"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_alignBottom="@id/etPhone"
                 android:layout_alignTop="@id/etPhone"
+                android:layout_alignBottom="@id/etPhone"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/smartphone" />
+                android:src="@drawable/smartphone"
+                tools:ignore="ContentDescription" />
 
             <EditText
                 android:id="@+id/etPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/etTitle"
-                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:maxLength="12"
                 android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/ivPhone"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@id/ivPhone"
                 android:background="@drawable/edittext2_background_layout"
-                android:hint="Số điện thoại"
+                android:hint="@string/edit_phone_number"
                 android:inputType="phone"
+                android:maxLength="12"
                 android:textColor="@color/colorPrimary"
-                android:textColorHint="@color/colorGray" />
+                android:textColorHint="@color/colorGray"
+                tools:ignore="Autofill" />
 
             <ImageView
                 android:id="@+id/ivLocal"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_alignBottom="@id/etLocal"
                 android:layout_alignTop="@id/etLocal"
+                android:layout_alignBottom="@id/etLocal"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/placeholder" />
+                android:src="@drawable/placeholder"
+                tools:ignore="ContentDescription" />
 
             <Spinner
                 android:id="@+id/etLocal"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@id/etPhone"
-                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/ivLocal"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@id/ivLocal"
                 android:background="@drawable/edittext2_background_layout"
                 android:inputType="text"
                 android:textColor="@color/colorPrimary"
@@ -248,15 +261,15 @@
                 android:layout_height="40dp"
                 android:layout_below="@id/etLocal"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/button2_background_layout"
-                android:text="Đổi mật khẩu"
+                android:text="@string/edit_change_password"
                 android:textAllCaps="false"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>

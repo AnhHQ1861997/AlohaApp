@@ -13,31 +13,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:paddingLeft="10dp">
+        android:paddingStart="10dp"
+        tools:ignore="RtlSymmetry">
 
         <RelativeLayout
             android:id="@+id/layoutSearch"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@id/ivAvatar"
+            android:layout_toStartOf="@id/ivAvatar"
             android:background="@drawable/button_background_layout">
 
             <ImageView
                 android:id="@+id/ivSearch"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:layout_margin="5dp"
-                android:src="@drawable/ic_search" />
+                android:src="@drawable/ic_search"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/ivSearch"
-                android:text="Tìm kiếm bạn bè"
+                android:layout_toEndOf="@id/ivSearch"
+                android:text="@string/main_search_friend"
                 android:textColor="@color/colorWhite" />
         </RelativeLayout>
 
@@ -45,7 +47,7 @@
             android:id="@+id/ivAvatar"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_margin="10dp"
             android:src="@drawable/default_avatar" />
     </RelativeLayout>

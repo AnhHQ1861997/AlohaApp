@@ -1,18 +1,58 @@
 <resources>
     <string name="app_name">Aloha</string>
-    <string name="title_activity_main2">Main2Activity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_message">MessageActivity</string>
+    //Activity Comment
     <string name="comment_user_name">Tên người dùng</string>
     <string name="comment_time">Vừa xong</string>
     <string name="comment_status">Đây là một trạng thái</string>
-    <string name="comment_more">Đọc tiếp...</string>
+    <string name="comment_more">Đọc tiếp…</string>
     <string name="comment_favorite">0 yêu thích</string>
     <string name="comment_comment">0 bình luận</string>
     <string name="comment_input">Nhập bình luận</string>
+
+    //Activity Edit Profile
+    <string name="edit_update">Cập nhật thông tin</string>
+    <string name="edit_last_name">Họ</string>
+    <string name="edit_first_name">Tên</string>
+    <string name="edit_email">Email</string>
+    <string name="edit_about">Giới thiệu</string>
+    <string name="edit_phone_number">Số điện thoại</string>
+    <string name="edit_change_password">Đổi mật khẩu</string>
+
+    //Activity Main
+    <string name="main_search_friend">Tìm kiếm bạn bè</string>
+
+    //Activity Message
+    <string name="message_send">Gửi tin nhắn</string>
+    <string name="message_user_name">Tên người dùng</string>
+    <string name="message_time">Vừa xong</string>
+
+    //Activity Post
+    <string name="post_update">Cập nhật trạng thái</string>
+    <string name="post_status">Bạn đang nghĩ gì</string>
+    <string name="profile_user_name">England Hoàng</string>
+    <string name="profile_add_friend">Thêm bạn bè</string>
+    <string name="profile_send_message">Gửi tin nhắn</string>
+    <string name="search_search">Tìm kiếm bằng tên, sđt</string>
+
+    //Activity Signin
+    <string name="signin_email">Email</string>
+    <string name="signin_pass">Mật khẩu</string>
+    <string name="signin_remember">Ghi nhớ đăng nhập</string>
+    <string name="signin_signin">Đăng nhập</string>
+    <string name="signin_create_account">Tạo tài khoản</string>
+
+    //Activity Signup
+    <string name="signup_last_name">Họ</string>
+    <string name="signup_first_name">Tên</string>
+    <string name="signup_email">Email</string>
+    <string name="signup_phone_number">Số điện thoại</string>
+    <string name="signup_password">Mật khẩu</string>
+    <string name="signup_password_repress">Nhập lại mật khẩu</string>
+    <string name="signup_male">Nam</string>
+    <string name="signup_female">Nữ</string>
+    <string name="signup_register">Đăng ký</string>
+    <string name="signup_has_acccount">Đã có tài khoản!</string>
+
+
 </resources>

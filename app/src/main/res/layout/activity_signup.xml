@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,7 +17,7 @@
         android:gravity="center"
         android:text="@string/app_name"
         android:textColor="@color/colorWhite"
-        android:textSize="50dp" />
+        android:textSize="50sp" />
 
     <RelativeLayout
         android:id="@+id/layoutMain"
@@ -39,28 +38,27 @@
                 android:id="@+id/etFirstName"
                 android:layout_width="1000dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
                 android:layout_margin="5dp"
-                android:layout_toLeftOf="@id/etLastName"
                 android:layout_weight="1"
                 android:background="@drawable/edittext_background_layout"
-                android:hint="Họ"
+                android:hint="@string/signup_last_name"
                 android:inputType="text"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGray" />
+                android:textColorHint="@color/colorGray"
+                tools:ignore="Autofill" />
 
             <EditText
                 android:id="@+id/etLastName"
                 android:layout_width="1000dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/edittext_background_layout"
-                android:hint="Tên"
+                android:hint="@string/signup_first_name"
                 android:inputType="text"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorGray" />
+                android:textColorHint="@color/colorGray"
+                tools:ignore="Autofill" />
         </LinearLayout>
 
         <EditText
@@ -71,10 +69,11 @@
             android:layout_below="@id/layoutName"
             android:layout_margin="5dp"
             android:background="@drawable/edittext_background_layout"
-            android:hint="Email"
+            android:hint="@string/signup_email"
             android:inputType="textEmailAddress"
             android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorGray" />
+            android:textColorHint="@color/colorGray"
+            tools:ignore="Autofill" />
 
         <EditText
             android:id="@+id/etPhone"
@@ -84,11 +83,12 @@
             android:layout_below="@id/etEmail"
             android:layout_margin="5dp"
             android:background="@drawable/edittext_background_layout"
-            android:hint="Số điện thoại"
+            android:hint="@string/signup_phone_number"
             android:inputType="phone"
             android:maxLength="12"
             android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorGray" />
+            android:textColorHint="@color/colorGray"
+            tools:ignore="Autofill" />
 
         <EditText
             android:id="@+id/etPassword"
@@ -98,11 +98,12 @@
             android:layout_below="@id/etPhone"
             android:layout_margin="5dp"
             android:background="@drawable/edittext_background_layout"
-            android:hint="Mật khẩu"
+            android:hint="@string/signup_password"
             android:inputType="textPassword"
             android:maxLength="20"
             android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorGray" />
+            android:textColorHint="@color/colorGray"
+            tools:ignore="Autofill" />
 
         <EditText
             android:id="@+id/etConfirmPassword"
@@ -112,11 +113,12 @@
             android:layout_below="@id/etPassword"
             android:layout_margin="5dp"
             android:background="@drawable/edittext_background_layout"
-            android:hint="Nhập lại mật khẩu"
+            android:hint="@string/signup_password_repress"
             android:inputType="textPassword"
             android:maxLength="20"
             android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorGray" />
+            android:textColorHint="@color/colorGray"
+            tools:ignore="Autofill" />
 
         <RadioGroup
             android:id="@+id/radioGroup"
@@ -127,7 +129,8 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                tools:ignore="UselessParent">
 
                 <RelativeLayout
                     android:id="@+id/layoutMale"
@@ -146,11 +149,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toRightOf="@id/rbtMale"
+                        android:layout_toEndOf="@id/rbtMale"
                         android:gravity="center"
-                        android:text="Nam"
+                        android:text="@string/signup_male"
                         android:textColor="@color/colorGray"
-                        android:textSize="20dp" />
+                        android:textSize="20sp" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -158,7 +161,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:layout_toRightOf="@id/layoutMale">
+                    android:layout_toEndOf="@id/layoutMale">
 
                     <RadioButton
                         android:id="@+id/rbtFemale"
@@ -170,11 +173,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toRightOf="@id/rbtFemale"
+                        android:layout_toEndOf="@id/rbtFemale"
                         android:gravity="center"
-                        android:text="Nữ"
+                        android:text="@string/signup_female"
                         android:textColor="@color/colorGray"
-                        android:textSize="20dp" />
+                        android:textSize="20sp" />
                 </RelativeLayout>
             </RelativeLayout>
         </RadioGroup>
@@ -186,10 +189,10 @@
             android:layout_below="@id/radioGroup"
             android:layout_centerHorizontal="true"
             android:background="@drawable/button_background_layout"
-            android:text="Đăng ký"
+            android:text="@string/signup_register"
             android:textAllCaps="false"
             android:textColor="@color/colorGray"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
     </RelativeLayout>
 
@@ -200,7 +203,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
-        android:text="Đã có tài khoản!"
+        android:text="@string/signup_has_acccount"
         android:textColor="@color/colorGray" />
 
 </RelativeLayout>
