@@ -1,4 +1,4 @@
-package com.englandstudio.aloha.Fragments;
+package com.englandstudio.aloha.fragments;
 
 
 import android.app.ProgressDialog;
@@ -18,9 +18,8 @@ import android.widget.Toast;
 
 import com.englandstudio.aloha.CommentActivity;
 import com.englandstudio.aloha.GetTimeAgo;
-import com.englandstudio.aloha.Objects.FriendRequest;
-import com.englandstudio.aloha.Objects.Notification;
-import com.englandstudio.aloha.ProfileActivity;
+import com.englandstudio.aloha.objects.FriendRequest;
+import com.englandstudio.aloha.objects.Notification;
 import com.englandstudio.aloha.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,8 +33,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
-
-import org.w3c.dom.Text;
 
 import java.util.HashMap;
 import java.util.Map;

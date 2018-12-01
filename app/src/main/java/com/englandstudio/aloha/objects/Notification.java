@@ -1,18 +1,19 @@
-package com.englandstudio.aloha.Objects;
+package com.englandstudio.aloha.objects;
 
-public class Comment {
-    String avatar, firstName, lastName, comment;
+public class Notification {
+    String avatar, firstName, lastName, comment, type;
     long time;
 
-    public Comment(String avatar, String firstName, String lastName, String comment, long time) {
+    public Notification(String avatar, String firstName, String lastName, String comment,String type, long time) {
         this.avatar = avatar;
         this.firstName = firstName;
         this.lastName = lastName;
         this.comment = comment;
+        this.type = type;
         this.time = time;
     }
 
-    public Comment() {
+    public Notification() {
 
     }
 
@@ -46,6 +47,14 @@ public class Comment {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public long getTime() {

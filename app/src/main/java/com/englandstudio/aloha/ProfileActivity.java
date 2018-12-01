@@ -6,7 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.annotation.NonNull;
-import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -19,8 +18,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.englandstudio.aloha.Fragments.NewsFragment;
-import com.englandstudio.aloha.Objects.Post;
+import com.englandstudio.aloha.objects.Post;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.github.ivbaranov.mfb.MaterialFavoriteButton;
 import com.google.android.gms.tasks.OnCompleteListener;

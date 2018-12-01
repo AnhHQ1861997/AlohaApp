@@ -53,14 +53,14 @@
             android:parentActivityName=".MainActivity" />
 
         <service
-            android:name=".Service.MessageService"
+            android:name=".service.MessageService"
             android:enabled="true"
             android:exported="true"
             android:permission=""
             tools:ignore="ExportedService,InnerclassSeparator" />
 
         <service
-            android:name=".Service.FriendRequestService"
+            android:name=".service.FriendRequestService"
             android:enabled="true"
             android:exported="true"
             tools:ignore="ExportedService,InnerclassSeparator" />
