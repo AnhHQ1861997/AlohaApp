@@ -8,4 +8,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_message">MessageActivity</string>
+    <string name="comment_user_name">Tên người dùng</string>
+    <string name="comment_time">Vừa xong</string>
+    <string name="comment_status">Đây là một trạng thái</string>
+    <string name="comment_more">Đọc tiếp...</string>
+    <string name="comment_favorite">0 yêu thích</string>
+    <string name="comment_comment">0 bình luận</string>
+    <string name="comment_input">Nhập bình luận</string>
 </resources>
