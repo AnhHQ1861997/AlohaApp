@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Aloha</string>
+    <string name="app_message">Chatting with love</string>
 
     //Activity Comment
     <string name="comment_user_name">Tên người dùng</string>
@@ -26,6 +27,7 @@
     <string name="message_send">Gửi tin nhắn</string>
     <string name="message_user_name">Tên người dùng</string>
     <string name="message_time">Vừa xong</string>
+    <string name="message_message">Đây là 1 dòng tin nhắn</string>
 
     //Activity Post
     <string name="post_update">Cập nhật trạng thái</string>
@@ -53,6 +55,24 @@
     <string name="signup_female">Nữ</string>
     <string name="signup_register">Đăng ký</string>
     <string name="signup_has_acccount">Đã có tài khoản!</string>
+
+    //Activity News
+    <string name="news_update">Cập nhật trạng thái…</string>
+
+    //Activity Notification
+    <string name="noti_notification">Thông báo</string>
+    <string name="noti_add_friend_request">Lời mời kết bạn</string>
+
+    //Activity Options
+    <string name="options_profile">Trang cá nhân</string>
+    <string name="options_search">Tìm kiếm</string>
+    <string name="options_newsfeed">Bảng tin</string>
+    <string name="options_message">Tin nhắn</string>
+    <string name="options_notification">Thông báo</string>
+    <string name="options_friend">Bạn bè</string>
+    <string name="options_share">Chia sẻ</string>
+    <string name="options_info">Thông tin ứng dụng</string>
+    <string name="options_signout">Đăng xuất</string>
 
 
 </resources>
