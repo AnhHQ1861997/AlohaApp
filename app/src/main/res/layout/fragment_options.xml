@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,11 +8,12 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:id="@+id/layoutProfile"
@@ -21,24 +21,24 @@
                 android:layout_height="wrap_content"
                 android:padding="15dp">
 
-
                 <ImageView
                     android:id="@+id/ivProfile"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/business" />
+                    android:src="@drawable/business"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/tvProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_toRightOf="@id/ivProfile"
-                    android:text="Trang cá nhân"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@id/ivProfile"
+                    android:text="@string/options_profile"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="22dp"
+                    android:textSize="22sp"
                     android:textStyle="italic" />
 
             </RelativeLayout>
@@ -56,18 +56,19 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/search" />
+                    android:src="@drawable/search"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/tvSearch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_toRightOf="@id/ivSearch"
-                    android:text="Tìm kiếm"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@id/ivSearch"
+                    android:text="@string/options_search"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="22dp"
+                    android:textSize="22sp"
                     android:textStyle="italic" />
 
             </RelativeLayout>
@@ -83,18 +84,19 @@
                     android:id="@+id/ivNewsFeed"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/edit" />
+                    android:src="@drawable/edit"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/tvNews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_toRightOf="@id/ivNewsFeed"
-                    android:text="Bảng tin"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@id/ivNewsFeed"
+                    android:text="@string/options_newsfeed"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="22dp"
+                    android:textSize="22sp"
                     android:textStyle="italic" />
 
             </RelativeLayout>
@@ -110,18 +112,19 @@
                     android:id="@+id/ivMessages"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/chat" />
+                    android:src="@drawable/chat"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/tvMessages"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_toRightOf="@id/ivMessages"
-                    android:text="Tin nhắn"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@id/ivMessages"
+                    android:text="@string/options_message"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="22dp"
+                    android:textSize="22sp"
                     android:textStyle="italic" />
 
             </RelativeLayout>
@@ -137,18 +140,19 @@
                     android:id="@+id/ivNotifications"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/music" />
+                    android:src="@drawable/music"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/tvNotifications"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_toRightOf="@id/ivNotifications"
-                    android:text="Thông báo"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@id/ivNotifications"
+                    android:text="@string/options_notification"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="22dp"
+                    android:textSize="22sp"
                     android:textStyle="italic" />
 
             </RelativeLayout>
@@ -164,18 +168,19 @@
                     android:id="@+id/ivFriends"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/shapes" />
+                    android:src="@drawable/shapes"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/tvFriends"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_toRightOf="@id/ivFriends"
-                    android:text="Bạn bè"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@id/ivFriends"
+                    android:text="@string/options_friend"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="22dp"
+                    android:textSize="22sp"
                     android:textStyle="italic" />
 
             </RelativeLayout>
@@ -191,18 +196,19 @@
                     android:id="@+id/ivShare"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/share" />
+                    android:src="@drawable/share"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/tvShare"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_toRightOf="@id/ivShare"
-                    android:text="Chia sẻ"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@id/ivShare"
+                    android:text="@string/options_share"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="22dp"
+                    android:textSize="22sp"
                     android:textStyle="italic" />
 
             </RelativeLayout>
@@ -218,18 +224,19 @@
                     android:id="@+id/ivAbout"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/info" />
+                    android:src="@drawable/info"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/tvAbout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_toRightOf="@id/ivAbout"
-                    android:text="Thông tin ứng dụng"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@id/ivAbout"
+                    android:text="@string/options_info"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="22dp"
+                    android:textSize="22sp"
                     android:textStyle="italic" />
 
             </RelativeLayout>
@@ -245,18 +252,19 @@
                     android:id="@+id/ivLogout"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/mark" />
+                    android:src="@drawable/mark"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/tvLogout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_toRightOf="@id/ivLogout"
-                    android:text="Đăng xuất"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@id/ivLogout"
+                    android:text="@string/options_signout"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="22dp"
+                    android:textSize="22sp"
                     android:textStyle="italic" />
 
             </RelativeLayout>

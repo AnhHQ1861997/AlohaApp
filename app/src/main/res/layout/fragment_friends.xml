@@ -10,6 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorWhite"
-        tools:listitem="@layout/item_friend"></android.support.v7.widget.RecyclerView>
+        tools:listitem="@layout/item_friend" />
 
 </RelativeLayout>

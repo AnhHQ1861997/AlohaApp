@@ -10,11 +10,12 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:id="@+id/layoutTop"
@@ -27,7 +28,7 @@
                     android:id="@+id/ivAvatar"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp"
                     android:src="@drawable/default_avatar"
                     app:civ_border_color="@color/colorPrimary"
                     app:civ_border_width="2dp" />
@@ -36,18 +37,18 @@
                     android:id="@+id/layoutStatus"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_toRightOf="@id/ivAvatar"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/ivAvatar"
                     android:background="@drawable/layout_background_layout">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="20dp"
-                        android:text="Cập nhật trạng thái...."
+                        android:layout_marginStart="20dp"
+                        android:text="@string/news_update"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:textStyle="italic" />
                 </RelativeLayout>
             </RelativeLayout>

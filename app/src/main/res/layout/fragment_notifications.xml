@@ -14,7 +14,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/colorWhite">
 
             <RelativeLayout
@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Thông báo"
+                    android:text="@string/noti_notification"
                     android:textColor="@color/colorPrimary"
                     android:textStyle="bold|italic" />
 
@@ -68,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/viewFriendRequestTop"
                     android:padding="5dp"
-                    android:text="Lời mời kết bạn"
+                    android:text="@string/noti_add_friend_request"
                     android:textColor="@color/colorPrimary"
                     android:textStyle="bold|italic" />
 

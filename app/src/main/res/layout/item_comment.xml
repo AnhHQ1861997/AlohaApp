@@ -20,8 +20,8 @@
         android:id="@+id/layoutComment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@id/ivAvatar"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/ivAvatar"
         android:background="@drawable/item_post_background_layout"
         android:padding="10dp">
 
@@ -29,7 +29,7 @@
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tên người dùng"
+            android:text="@string/comment_user_name"
             android:textColor="@color/colorPrimary"
             android:textStyle="italic|bold" />
 
@@ -38,18 +38,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvName"
-            android:text="Đây là 1 bình luận" />
+            android:text="@string/comment_comment_" />
     </RelativeLayout>
 
     <TextView
         android:id="@+id/tvTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/layoutComment"
+        android:layout_alignStart="@id/layoutComment"
         android:layout_below="@id/layoutComment"
-        android:layout_marginLeft="10dp"
-        android:text="Vừa xong"
-        android:textSize="12dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/comment_time"
+        android:textSize="12sp"
         android:textStyle="italic" />
 
 
