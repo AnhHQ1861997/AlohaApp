@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@color/colorWhite"
     android:layout_height="wrap_content">
@@ -23,20 +24,20 @@
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@id/ivAvatar"
-            android:text="Tên người dùng"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/ivAvatar"
+            android:text="@string/friend_user_name"
             android:textColor="@color/colorPrimary"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/tvName"
+            android:layout_alignStart="@id/tvName"
             android:layout_below="@id/tvName"
-            android:text="Bạn nhận được một lời mời kết bạn"
+            android:text="@string/friend_request"
             android:textStyle="italic" />
 
         <LinearLayout
@@ -53,9 +54,10 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bubble_right_background_layout"
-                android:text="Đồng ý"
+                android:text="@string/friend_accept"
                 android:textAllCaps="false"
-                android:textColor="@color/colorWhite" />
+                android:textColor="@color/colorWhite"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btRefuse"
@@ -64,8 +66,9 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bubble_background_layout"
-                android:text="Từ chối"
-                android:textAllCaps="false" />
+                android:text="@string/friend_deny"
+                android:textAllCaps="false"
+                tools:ignore="ButtonStyle" />
         </LinearLayout>
     </RelativeLayout>
 

@@ -24,9 +24,9 @@
             android:layout_width="10dp"
             android:layout_height="10dp"
             android:layout_alignBottom="@id/ivAvatar"
-            android:layout_alignRight="@id/ivAvatar"
+            android:layout_alignEnd="@id/ivAvatar"
             android:layout_marginBottom="3dp"
-            android:layout_marginRight="3dp"
+            android:layout_marginEnd="3dp"
             android:src="@color/colorOnline"
             app:civ_border_color="@color/colorPrimary"
             app:civ_border_width="1dp" />
@@ -35,30 +35,30 @@
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@id/ivAvatar"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/ivAvatar"
             android:textColor="@color/colorPrimary"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@id/tvMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/tvName"
+            android:layout_alignStart="@id/tvName"
             android:layout_below="@id/tvName"
             android:maxLines="1"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:textStyle="italic" />
 
         <TextView
             android:id="@id/tvTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/tvName"
+            android:layout_alignStart="@id/tvName"
             android:layout_below="@id/tvMessage"
             android:maxLines="1"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:textStyle="italic" />
     </RelativeLayout>
 

@@ -10,6 +10,7 @@
     <string name="comment_favorite">0 yêu thích</string>
     <string name="comment_comment">0 bình luận</string>
     <string name="comment_input">Nhập bình luận</string>
+    <string name="comment_comment_">Đây là 1 bình luận</string>
 
     //Activity Edit Profile
     <string name="edit_update">Cập nhật thông tin</string>
@@ -62,6 +63,8 @@
     //Activity Notification
     <string name="noti_notification">Thông báo</string>
     <string name="noti_add_friend_request">Lời mời kết bạn</string>
+    <string name="noti_comment">Ai đó đã bình luận về bài viết của bạn: Đây là một câu bình luận ví dụ</string>
+    <string name="noti_time">Vừa xong</string>
 
     //Activity Options
     <string name="options_profile">Trang cá nhân</string>
@@ -73,6 +76,19 @@
     <string name="options_share">Chia sẻ</string>
     <string name="options_info">Thông tin ứng dụng</string>
     <string name="options_signout">Đăng xuất</string>
+
+    //Activity Friend
+    <string name="friend_user_name">Tên người dùng</string>
+    <string name="friend_request">Bạn nhận được một lời mời kết bạn</string>
+    <string name="friend_accept">Đồng ý</string>
+    <string name="friend_deny">Từ chối</string>
+
+    //Activity Post
+    <string name="post_user_name">Tên người dùng</string>
+    <string name="post_time">Vừa xong</string>
+    <string name="post_more">Đọc tiếp…</string>
+    <string name="post_favorite">0 yêu thích</string>
+    <string name="post_comment">0 bình luận</string>
 
 
 </resources>
