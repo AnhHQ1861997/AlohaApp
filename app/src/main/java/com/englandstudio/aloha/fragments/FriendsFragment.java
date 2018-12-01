@@ -1,4 +1,4 @@
-package com.englandstudio.aloha.Fragments;
+package com.englandstudio.aloha.fragments;
 
 
 import android.app.AlertDialog;
@@ -16,8 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.englandstudio.aloha.MessageActivity;
-import com.englandstudio.aloha.Objects.Friend;
-import com.englandstudio.aloha.Objects.User;
+import com.englandstudio.aloha.objects.Friend;
 import com.englandstudio.aloha.ProfileActivity;
 import com.englandstudio.aloha.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;

@@ -1,16 +1,18 @@
-package com.englandstudio.aloha.Objects;
+package com.englandstudio.aloha.objects;
 
-public class FriendRequest {
-    String avatar, firstName, lastName, from;
+public class Comment {
+    String avatar, firstName, lastName, comment;
+    long time;
 
-    public FriendRequest(String avatar, String firstName, String lastName, String from) {
+    public Comment(String avatar, String firstName, String lastName, String comment, long time) {
         this.avatar = avatar;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.from = from;
+        this.comment = comment;
+        this.time = time;
     }
 
-    public FriendRequest() {
+    public Comment() {
 
     }
 
@@ -38,12 +40,19 @@ public class FriendRequest {
         this.lastName = lastName;
     }
 
-    public String getFrom() {
-        return from;
+    public String getComment() {
+        return comment;
     }
 
-    public void setFrom(String from) {
-        this.from = from;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
+    public long getTime() {
+        return time;
+    }
+
+    public void setTime(long time) {
+        this.time = time;
+    }
 }

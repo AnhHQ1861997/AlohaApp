@@ -1,4 +1,4 @@
-package com.englandstudio.aloha.Fragments;
+package com.englandstudio.aloha.fragments;
 
 
 import android.content.Intent;
@@ -13,8 +13,6 @@ import android.widget.TextView;
 
 import com.englandstudio.aloha.GetTimeAgo;
 import com.englandstudio.aloha.MessageActivity;
-import com.englandstudio.aloha.Objects.Inbox;
-import com.englandstudio.aloha.ProfileActivity;
 import com.englandstudio.aloha.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,7 +22,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
-import com.englandstudio.aloha.Objects.Message;
+import com.englandstudio.aloha.objects.Message;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 

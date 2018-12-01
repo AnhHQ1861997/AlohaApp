@@ -1,4 +1,4 @@
-package com.englandstudio.aloha.Service;
+package com.englandstudio.aloha.service;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -9,12 +9,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
-import android.media.RingtoneManager;
-import android.net.Uri;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 
-import com.englandstudio.aloha.ProfileActivity;
+import com.englandstudio.aloha.MessageActivity;
 import com.englandstudio.aloha.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -24,24 +22,24 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class FriendRequestService extends Service {
+public class MessageService extends Service {
 
     //Authentication
     FirebaseAuth mAuth;
     FirebaseUser mUser;
-    String current_id;
+    String current_id, user_id;
 
     //Reference
-    DatabaseReference mRefUser, mRefAddFriend;
+    DatabaseReference mRefLastMessage;
 
     //Notification
     private NotificationCompat.Builder builder;
 
-    private static final int MY_NOTIFICATION_ID = 99999;
+    private static final int MY_NOTIFICATION_ID = 12345;
 
     private static final int MY_REQUEST_CODE = 100;
 
-    public FriendRequestService() {
+    public MessageService() {
     }
 
     @Override
@@ -54,12 +52,9 @@ public class FriendRequestService extends Service {
     public void onCreate() {
         super.onCreate();
 
-        anhXa();
         authentication();
         reference();
-    }
-
-    private void anhXa() {
+        noti();
 
     }
 
@@ -70,8 +65,12 @@ public class FriendRequestService extends Service {
     }
 
     private void reference() {
-        mRefUser = FirebaseDatabase.getInstance().getReference().child("User");
-        mRefAddFriend = FirebaseDatabase.getInstance().getReference().child("AddFriend");
+        mRefLastMessage = FirebaseDatabase.getInstance().getReference().child("LastMessage");
+    }
+
+    private void noti() {
+
+
     }
 
     @Override
@@ -79,7 +78,7 @@ public class FriendRequestService extends Service {
         this.builder = new NotificationCompat.Builder(this, "CHANNEL_ID");
         this.builder.setAutoCancel(true);
 
-        final MediaPlayer mp = MediaPlayer.create(FriendRequestService.this, R.raw.ringtone);
+        final MediaPlayer mp = MediaPlayer.create(MessageService.this, R.raw.ringtone);
         //Uri alarmSound = RingtoneManager.getDefaultUri(R.raw.ringtone);
         //builder.setSound(mp);
 
@@ -95,22 +94,24 @@ public class FriendRequestService extends Service {
         this.builder.setContentIntent(pendingIntent);
         final NotificationManager manager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
 
-        mRefAddFriend.child(current_id).addValueEventListener(new ValueEventListener() {
+        mRefLastMessage.child(current_id).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot snap : dataSnapshot.getChildren()) {
                     if (snap.exists()) {
                         String user_id = snap.getKey();
+                        String avatar = snap.child("avatar").getValue().toString();
                         String firstName = snap.child("firstName").getValue().toString();
                         String lastName = snap.child("lastName").getValue().toString();
-                        String type = snap.child("type").getValue().toString();
+                        String message = snap.child("message").getValue().toString();
+                        String service_id = snap.child("serviceid").getValue().toString();
                         String received = snap.child("received").getValue().toString();
 
                         builder.setContentTitle(firstName + " " + lastName);
-                        builder.setContentText("Bạn có 1 lời mời kết bạn");
+                        builder.setContentText(message);
 
                         String NOTIFICATION_CHANNEL_ID = user_id;
-                        String NOTIFICATION_CHANNEL_NAME = "FriendRequestService";
+                        String NOTIFICATION_CHANNEL_NAME = "MessageService";
 
                         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
                             int importance = NotificationManager.IMPORTANCE_LOW;
@@ -124,10 +125,9 @@ public class FriendRequestService extends Service {
                             builder.setChannelId(NOTIFICATION_CHANNEL_ID);
                         }
 
-                        if (type.equals("received") && received.equals("false")) {
+                        if (!service_id.equals(current_id) && received.equals("false")) {
                             mp.start();
-                            Intent messageIntent = new Intent(FriendRequestService.this, ProfileActivity.class);
-                            messageIntent.putExtra("type", "guest");
+                            Intent messageIntent = new Intent(MessageService.this, MessageActivity.class);
                             messageIntent.putExtra("user_id", user_id);
                             PendingIntent resultPendingIntent =
                                     PendingIntent.getActivity(
@@ -141,8 +141,9 @@ public class FriendRequestService extends Service {
 
                             Notification notification = builder.build();
                             manager.notify(MY_NOTIFICATION_ID, notification);
-                            mRefAddFriend.child(current_id).child(user_id).child("received").setValue("true");
+                            mRefLastMessage.child(current_id).child(user_id).child("received").setValue("true");
                         }
+
 
                     }
                 }
@@ -159,5 +160,6 @@ public class FriendRequestService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
+
     }
 }

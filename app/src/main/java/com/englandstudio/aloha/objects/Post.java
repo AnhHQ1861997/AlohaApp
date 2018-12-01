@@ -1,18 +1,18 @@
-package com.englandstudio.aloha.Objects;
+package com.englandstudio.aloha.objects;
 
-public class Message {
-    String avatar, firstName, lastName, message;
+public class Post {
+    String avatar, firstName, lastName, status;
     long time;
 
-    public Message(String avatar, String firstName, String lastName, String message, long time) {
+    public Post(String avatar, String firstName, String lastName, String status, long time) {
         this.avatar = avatar;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.message = message;
+        this.status = status;
         this.time = time;
     }
 
-    public Message() {
+    public Post() {
 
     }
 
@@ -40,12 +40,12 @@ public class Message {
         this.lastName = lastName;
     }
 
-    public String getMessage() {
-        return message;
+    public String getStatus() {
+        return status;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public long getTime() {

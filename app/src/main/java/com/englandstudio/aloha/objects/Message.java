@@ -1,19 +1,18 @@
-package com.englandstudio.aloha.Objects;
+package com.englandstudio.aloha.objects;
 
-public class Notification {
-    String avatar, firstName, lastName, comment, type;
+public class Message {
+    String avatar, firstName, lastName, message;
     long time;
 
-    public Notification(String avatar, String firstName, String lastName, String comment,String type, long time) {
+    public Message(String avatar, String firstName, String lastName, String message, long time) {
         this.avatar = avatar;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.comment = comment;
-        this.type = type;
+        this.message = message;
         this.time = time;
     }
 
-    public Notification() {
+    public Message() {
 
     }
 
@@ -41,20 +40,12 @@ public class Notification {
         this.lastName = lastName;
     }
 
-    public String getComment() {
-        return comment;
+    public String getMessage() {
+        return message;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public long getTime() {

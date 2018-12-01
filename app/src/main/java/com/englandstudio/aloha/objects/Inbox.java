@@ -1,4 +1,4 @@
-package com.englandstudio.aloha.Objects;
+package com.englandstudio.aloha.objects;
 
 public class Inbox {
     String avatar, message;

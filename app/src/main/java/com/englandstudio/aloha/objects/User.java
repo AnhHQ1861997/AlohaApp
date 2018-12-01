@@ -1,4 +1,4 @@
-package com.englandstudio.aloha.Objects;
+package com.englandstudio.aloha.objects;
 
 public class User {
     String avatar, email, firstName, gender, id, lastName, local, password, phone, title;

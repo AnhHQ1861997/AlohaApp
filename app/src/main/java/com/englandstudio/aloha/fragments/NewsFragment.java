@@ -1,11 +1,8 @@
-package com.englandstudio.aloha.Fragments;
+package com.englandstudio.aloha.fragments;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,11 +11,10 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.englandstudio.aloha.CommentActivity;
 import com.englandstudio.aloha.GetTimeAgo;
-import com.englandstudio.aloha.Objects.Post;
+import com.englandstudio.aloha.objects.Post;
 import com.englandstudio.aloha.PostActivity;
 import com.englandstudio.aloha.ProfileActivity;
 import com.englandstudio.aloha.R;
@@ -31,13 +27,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
-import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
-
-import java.text.DateFormat;
-import java.util.HashMap;
-import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
